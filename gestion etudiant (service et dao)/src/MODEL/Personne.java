@@ -54,8 +54,7 @@ public abstract class Personne {
     public void setType(String type) {
         this.type = type;
     }
-    
-    
+
     
     
 }

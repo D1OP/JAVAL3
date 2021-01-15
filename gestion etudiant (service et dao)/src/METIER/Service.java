@@ -41,9 +41,23 @@ public class Service {
         return daoClasse.findAll();
     }
     
-     public List<Personne> listerEtudiantParClasse(Classe classe){
+    public List<Personne> listerEtudiantParClasse(Classe classe){
         return daoPersonne.findByClasse(classe);
     }
+    
+    public List<Personne> listerProfesseur(Professeur prof){
+        return daoPersonne.findProfesseur(prof);
+    }
+    
+    public List<Details> listerModulesParClasse(Classe classe){
+        return daoDetails.findModulesByClasse(classe);
+    }
+    
+    public List<Details> listerModules(Details details){
+        return daoDetails.findModules(details);
+    }
+    
+    
     
     /*public boolean creerEtudiant (Etudiant etu){   
         return daoPersonne.insert(etu) !=0;  
@@ -76,6 +90,5 @@ public class Service {
            return daoDetails.insert(details)!=0;
      }
     
-    
-    
+   
 }
