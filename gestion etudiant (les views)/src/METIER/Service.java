@@ -8,6 +8,7 @@ package METIER;
 import DAO.DaoClasse;
 import DAO.DaoDetails;
 import DAO.DaoPersonne;
+import MODEL.Admin;
 import MODEL.Classe;
 import MODEL.Details;
 import MODEL.Etudiant;
@@ -37,6 +38,11 @@ public class Service {
         else return true;
     }
     
+    public boolean seConnecter (Admin admin){        
+        return daoPersonne.insert(admin) !=0;
+    }
+    
+    
     public List<Classe> listerClasse(){
         return daoClasse.findAll();
     }
@@ -45,18 +51,17 @@ public class Service {
         return daoPersonne.findByClasse(classe);
     }
     
-    public List<Personne> listerProfesseur(Professeur prof){
-        return daoPersonne.findProfesseur(prof);
+    public List<Personne> listerProfesseurParModules(Professeur prof){
+        return daoDetails.findProfesseurByModules(prof);
     }
     
-    public List<Details> listerModulesParClasse(Classe classe){
-        return daoDetails.findModulesByClasse(classe);
-    }
+    public List<Details> listerModulesParProfesseurEtClasse(Details details){
+        return daoDetails.findModulesByProfesseurAndClasse(details);
+    }  
     
-    public List<Details> listerModules(Details details){
-        return daoDetails.findModules(details);
+     public List<Personne> listerProfesseur(){
+        return daoPersonne.findAllProfesseur();
     }
-    
     
     
     /*public boolean creerEtudiant (Etudiant etu){   
