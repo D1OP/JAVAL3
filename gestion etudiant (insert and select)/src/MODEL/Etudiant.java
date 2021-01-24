@@ -19,6 +19,12 @@ public class Etudiant extends Personne{
         type="Etudiant";
     }
 
+    public Etudiant(String tuteur) {
+        this.tuteur = tuteur;
+        type="Etudiant";
+    }
+    
+
     public Etudiant(String tuteur, String nomComplet) {
         super(nomComplet);
         this.tuteur = tuteur;
@@ -31,6 +37,14 @@ public class Etudiant extends Personne{
         type="Etudiant";
     }
 
+    public Etudiant(String tuteur, Classe cl, String nomComplet) {
+        super(nomComplet);
+        this.tuteur = tuteur;
+        this.cl = cl;
+    }
+    
+    
+
     public String getTuteur() {
         return tuteur;
     }
@@ -41,7 +55,7 @@ public class Etudiant extends Personne{
 
     @Override
     public String toString() {
-        return super.toString()+"Tuteur:"+tuteur; //To change body of generated methods, choose Tools | Templates.
+        return toString()+"Tuteur:"+tuteur; //To change body of generated methods, choose Tools | Templates.
     }
 
     public Classe getCl() {

@@ -9,7 +9,7 @@ package MODEL;
  *
  * @author Djiby DIOP
  */
-public abstract class Personne {
+public class Personne {
     protected int id;
     protected String nomComplet;
     protected String type;
@@ -27,6 +27,13 @@ public abstract class Personne {
         this.id = id;
         this.nomComplet = nomComplet;
     }
+
+    
+    public Personne(String nomComplet, String type) {
+        this.nomComplet = nomComplet;
+        this.type = type;
+    }
+        
 
   
             

@@ -21,7 +21,7 @@ import java.util.logging.Logger;
  * @author Djiby DIOP
  */
 public class DaoClasse implements IDao<Classe> {
-    private final String SQL_INSERT="INSERT INTO `classe` (`libelle`, `nbre-etudiant`) VALUES (?,?);";
+    private final String SQL_INSERT="INSERT INTO `classe` (`libelle`, `nbre_etudiant`) VALUES (?,?)";
     private final String SQL_SELECT_ALL="select * from classe";
     
     private DaoMysql mysql;
@@ -62,11 +62,11 @@ public class DaoClasse implements IDao<Classe> {
                 Classe cl=new Classe();
                 cl.setId(rs.getInt("id"));
                 cl.setLibelle(rs.getString("libelle"));
-                cl.setNbre(rs.getInt("nbre-etudiant"));
+                cl.setNbre(rs.getInt("nbre_etudiant"));
                 lClasses.add(cl);
             }
         } catch (SQLException ex) {
-           System.out.println("Erreur lors de la selection");
+          // System.out.println("Erreur lors de la selection");
         }finally{
             mysql.closeConnexion();
         }

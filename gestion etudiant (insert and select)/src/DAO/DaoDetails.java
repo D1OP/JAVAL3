@@ -6,6 +6,7 @@
 package DAO;
 
 import MODEL.Classe;
+import MODEL.Convert;
 import MODEL.Details;
 import MODEL.Personne;
 import MODEL.Professeur;
@@ -23,6 +24,7 @@ import java.util.logging.Logger;
 public class DaoDetails implements IDao <Details> {
     private final String SQL_INSERT="INSERT INTO `details` (`classe_id`, `professeur_id`, `modules`, `annee`) VALUES (?,?,?,?);";      
     private final String SQL_SELECT_MODULES="select * from details where professeur_id=? and classe_id=?";
+    private final String SQL_SELECT_ALL_MODULES="select modules from details"; 
 
     private DaoMysql mysql;
     
@@ -33,52 +35,80 @@ public class DaoDetails implements IDao <Details> {
     
     @Override
     public int insert(Details details){
-         int nbreLigne=0;
-   
+         int nbreLigne=0;  
+                  
         try {
             mysql.ouvrirConnexionBD();
             mysql.preparerRequete(SQL_INSERT); 
-            mysql.getPs().setObject(1,details.getModules());
-            mysql.getPs().setObject(2,details.getCl());
-            mysql.getPs().setObject(3,details.getProfesseur());
+            mysql.getPs().setInt(1,details.getCl().getId());
+            mysql.getPs().setInt(2,details.getProfesseur().getId());
+            mysql.getPs().setString(3,Convert.listToString(details.getModules()));
             mysql.getPs().setString(4,details.getAnnee());
                  
             nbreLigne=mysql.executeMisAJour();
                            
         } catch (SQLException ex) {
-            System.out.println("Erreur d'insertion");
+            System.out.println("Erreur");
         }finally{
             mysql.closeConnexion();
-        }
-    
+        }    
         return nbreLigne;
      }    
   
     
-    
- public List<String>findModules(Details details){
-     List<String> lModules=new ArrayList();
-     
-        try {    
-     
+ public List<Details>findModules(Details details){
+     List<Details> lModules=new ArrayList();            
+     try{
             mysql.ouvrirConnexionBD();
             mysql.preparerRequete(SQL_SELECT_MODULES);
-            
+            mysql.getPs().setInt(1, details.getCl().getId());
+            mysql.getPs().setInt(2, details.getProfesseur().getId());            
             ResultSet rs=mysql.executeSelect();
-                                
-            while(rs.next()){
-                details.setProfesseur((Professeur) rs.getObject("professeur_id"));
-                details.setCl((Classe) rs.getObject("classe_id"));             
-                //lModules.add(modules);
-            }
+                while(rs.next()){
+                    details.setModules(Convert.stringToList(rs.getString("modules")));
+                    Classe cl=new Classe();
+                    cl.setId(rs.getInt("classe_id"));
+                    cl.setLibelle(rs.getString("libelle"));
+                    cl.setNbre(rs.getInt("nbre"));
+                    Professeur prof=new Professeur();
+                    prof.setId(rs.getInt("classe_id"));
+                    prof.setNomComplet(rs.getString("nomComplet"));
+                    prof.setGrade(rs.getString("grade"));
+                    prof.setMatricule(rs.getString("matricule"));                    
+                    details.setProfesseur(prof);
+                    details.setCl(cl);
+                    lModules.add(details);                    
+                }                        
         } catch (SQLException ex) {
-           System.out.println("Erreur lors de la selection");
+           System.out.println("Erreur");
         }finally{
             mysql.closeConnexion();
-        }
-       
+        }       
      return lModules;
- }
+    }
+ 
+    public List<Details>findAllModules(){
+         List<Details> lModules=new ArrayList<>();
+         try{
+            mysql.ouvrirConnexionBD();
+            mysql.preparerRequete(SQL_SELECT_ALL_MODULES);
+            ResultSet rs=mysql.executeSelect();
+                
+                while(rs.next()){
+                    Details details=new Details();
+                    details.setModules(Convert.stringToList(rs.getString("modules")));
+                    lModules.add(details);
+                }
+                
+           }catch (SQLException ex) {
+               System.out.println("Erreur");
+           }finally{
+           mysql.closeConnexion();
+       }      
+       return lModules;      
+    }
+    
+    
 }
 
 

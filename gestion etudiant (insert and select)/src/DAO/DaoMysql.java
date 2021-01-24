@@ -59,7 +59,7 @@ public class DaoMysql {
             nbreLigne=ps.executeUpdate();
             
         } catch (SQLException ex) {
-            Logger.getLogger(DaoMysql.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Erreur");
         }
         return nbreLigne;
     }
@@ -69,8 +69,7 @@ public class DaoMysql {
         try {
             rs= ps.executeQuery();
         } catch (SQLException ex) {
-            Logger.getLogger(DaoMysql.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            System.out.println("Erreur");        }
         return rs;
     }
     
@@ -78,7 +77,6 @@ public class DaoMysql {
         try {
             con.close();
         } catch (SQLException ex) {
-            Logger.getLogger(DaoMysql.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            System.out.println("Erreur");        }
     }
 }

@@ -34,6 +34,10 @@ public class Professeur extends Personne {
         type="Professeur";
     }
 
+    public Professeur(String matricule, String grade, String nomComplet) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public String getGrade() {
         return grade;
     }
@@ -44,7 +48,7 @@ public class Professeur extends Personne {
 
     @Override
     public String toString() {
-        return super.toString()+"Grade:"+grade; //To change body of generated methods, choose Tools | Templates.
+        return super.toString()+"Grade:"+grade;
     }
 
     public List<String> getModules() {
@@ -63,6 +67,6 @@ public class Professeur extends Personne {
         this.matricule = matricule;
     }
 
-    
+   
     
 }

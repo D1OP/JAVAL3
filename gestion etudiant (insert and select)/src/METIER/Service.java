@@ -44,13 +44,24 @@ public class Service {
         return daoClasse.findAll();
     }    
     
-    public List<Personne> listerEtudiantParClasse(Classe classe){
+    public List<Etudiant> listerEtudiantParClasse(Classe classe){
         return daoPersonne.findByClasse(classe);
     }        
     
-     public boolean creerPersonne (Etudiant pers){   
+    /*public boolean creerPersonne (Etudiant pers){   
         return daoPersonne.insert(pers) !=0;  
-     }
+     }*/
+    
+    public boolean creerEtudiant (Etudiant etu){   
+        return daoPersonne.insertEtudiant(etu) !=0;
+    }
+    public boolean creerProfesseur (Professeur pers){   
+        return daoPersonne.insertProfesseur(pers) !=0;
+    }
+    
+    public List<Details> listerModules(){
+       return daoDetails.findAllModules();
+   }
     
     public Professeur chercherProfesseur(String matricule){
         return daoPersonne.findProfesseurByMatricule(matricule);        
@@ -58,18 +69,18 @@ public class Service {
     
      public boolean attribuerClasse (Classe classe, Professeur prof, List<String>modules,String annee){   
            if(prof.getId()==0){
-               int id=daoPersonne.insert(prof);
+               int id=daoPersonne.insertProfesseur(prof);
                prof.setId(id); 
            }
            Details details=new Details(annee, modules, classe, prof);
            return daoDetails.insert(details)!=0;
-     }
+     }     
     
-     public List<Professeur> listerProfesseur(){
-        return daoPersonne.findProfesseur();
+     public List<Professeur> listerProfesseur(Personne personne){
+        return daoPersonne.findProfesseur(personne);
     }   
     
-     public List<String>listerModulesProfesseurParClasse(Classe classe,Professeur professeur){
+     public List<Details>listerModulesProfesseurParClasse(Classe classe,Professeur professeur){
         Details details=new Details(classe, professeur);
         return daoDetails.findModules(details);
      }

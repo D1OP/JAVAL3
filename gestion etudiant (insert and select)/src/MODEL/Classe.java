@@ -18,6 +18,12 @@ public class Classe {
     public Classe() {
     }
 
+    public Classe(int id) {
+        this.id = id;
+    }
+    
+    
+
     public Classe(int id, String libelle, String nomComplet, int nbre) {
         this.id = id;
         this.libelle = libelle;
@@ -74,7 +80,7 @@ public class Classe {
 
     @Override
     public String toString() {
-        return "Classe{" + "id=" + id + ", libelle=" + libelle + ", nomComplet=" + nomComplet + ", nbre=" + nbre + '}';
+        return libelle;
     }
 
     

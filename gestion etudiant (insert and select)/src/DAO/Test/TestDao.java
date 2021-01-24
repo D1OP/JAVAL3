@@ -7,8 +7,11 @@ package DAO.Test;
 
 import DAO.DaoClasse;
 import DAO.DaoDetails;
+import DAO.DaoPersonne;
 import MODEL.Classe;
 import MODEL.Details;
+import MODEL.Etudiant;
+import MODEL.Personne;
 
 /**
  *
@@ -25,15 +28,37 @@ public class TestDao {
         //Classe classe=new Classe("TTL3",10);
         //daoClasse.insert(classe);
         
+        
+        //DaoPersonne daoPersonne=new DaoPersonne();
+        //Etudiant pers=new Etudiant("djibril_diop","Etudiant");
+        //daoPersonne.insert(pers);
+        
+        
+        
+        
+        DaoPersonne daoPersonne=new DaoPersonne();
+       Etudiant etu =new Etudiant("djibril_diop","diop");
+        daoPersonne.insertEtudiant(etu);
+        
+        
         //daoClasse.findAll().forEach((classe)->{
-          //  System.out.println(classe);            
-        //});
+         //   System.out.println(classe);            
+       // });
         
         
-        DaoDetails daoDetails=new DaoDetails();
-        Details details=new Details();
-        daoDetails.insert(details);
+        //DaoDetails daoDetails=new DaoDetails();
+        //Details details=new Details();
+        //daoDetails.insert(details);
         
-    }
+        //DaoPersonne daoPers=new DaoPersonne();     
+        //daoPers.findByClasse(new Classe(1)).forEach(System.out::println);                
+        //System.out.println(daoPers.findProfesseurByMatricule("MAT20212"));
+        
+        //DaoPersonne daoPersonne=new DaoPersonne();
+       //daoPersonne.findProfesseur().forEach((professeur)->{
+         //System.out.println(professeur);
+       //});                           
+            
+     }
     
 }
