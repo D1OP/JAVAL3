@@ -1,0 +1,15 @@
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\GestionEtudiant\bin\Debug\GestionEtudiant.exe.config
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\GestionEtudiant\bin\Debug\GestionEtudiant.exe
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\GestionEtudiant\bin\Debug\GestionEtudiant.pdb
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\GestionEtudiant\obj\Debug\GestionEtudiant.csprojAssemblyReference.cache
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\GestionEtudiant\obj\Debug\GestionEtudiant.Properties.Resources.resources
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\GestionEtudiant\obj\Debug\GestionEtudiant.csproj.GenerateResource.cache
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\GestionEtudiant\obj\Debug\GestionEtudiant.csproj.CoreCompileInputs.cache
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\GestionEtudiant\obj\Debug\GestionEtudiant.exe
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\GestionEtudiant\obj\Debug\GestionEtudiant.pdb
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\GestionEtudiant\obj\Debug\GestionEtudiant.Form1.resources
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\GestionEtudiant\obj\Debug\GestionEtudiant.FrmConnexion.resources
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\GestionEtudiant\obj\Debug\GestionEtudiant.FrmMenu.resources
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\GestionEtudiant\obj\Debug\GestionEtudiant.FrmInscription.resources
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\GestionEtudiant\obj\Debug\GestionEtudiant.FrmProfesseur.resources
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\GestionEtudiant\obj\Debug\GestionEtudiant.FrmListerProfesseur.resources

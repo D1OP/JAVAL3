@@ -1,0 +1,13 @@
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\Fondamentaux\bin\Debug\Fondamentaux.exe.config
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\Fondamentaux\bin\Debug\Fondamentaux.exe
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\Fondamentaux\bin\Debug\Fondamentaux.pdb
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\Fondamentaux\bin\Debug\GestionEtudiant.exe
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\Fondamentaux\bin\Debug\GestionEtudiant.pdb
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\Fondamentaux\bin\Debug\GestionEtudiant.exe.config
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\Fondamentaux\obj\Debug\Fondamentaux.csprojAssemblyReference.cache
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\Fondamentaux\obj\Debug\Fondamentaux.Properties.Resources.resources
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\Fondamentaux\obj\Debug\Fondamentaux.csproj.GenerateResource.cache
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\Fondamentaux\obj\Debug\Fondamentaux.csproj.CoreCompileInputs.cache
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\Fondamentaux\obj\Debug\Fondamentaux.csproj.CopyComplete
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\Fondamentaux\obj\Debug\Fondamentaux.exe
+C:\Users\Djiby DIOP\Desktop\Webmastering\L3\C#\git\Liage3-2021\Fondamentaux\obj\Debug\Fondamentaux.pdb
